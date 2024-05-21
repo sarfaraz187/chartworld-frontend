@@ -1,5 +1,5 @@
-import { IGUIState } from "../../types/gui";
-import { GET_GUI } from "../contants";
+import { IAction, IGUIState } from "../../types/gui";
+import { SET_LAT, SET_LON, SET_ZOOM } from "../constants";
 
 const initialState: IGUIState = {
   zoom: 12,
@@ -7,12 +7,22 @@ const initialState: IGUIState = {
   lat: 37.82,
 };
 
-const guiReducer = (state = initialState, action) => {
+const guiReducer = (state = initialState, action: IAction) => {
   switch (action.type) {
-    case GET_GUI:
+    case SET_LAT:
       return {
         ...state,
-        zoom: action.payload,
+        lat: action.payload,
+      };
+    case SET_LON:
+      return {
+        ...state,
+        lat: action.payload,
+      };
+    case SET_ZOOM:
+      return {
+        ...state,
+        lat: action.payload,
       };
     default:
       return state;

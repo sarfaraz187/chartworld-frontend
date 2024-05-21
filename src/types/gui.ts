@@ -3,3 +3,8 @@ export interface IGUIState {
   lon: number;
   lat: number;
 }
+
+export interface IAction {
+  type: string;
+  payload: number;
+}
