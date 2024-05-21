@@ -1,11 +1,14 @@
 import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
-import "./index.css";
 import { Provider } from "react-redux";
 import store from "./store/configureStore.ts";
+import Home from "./pages/Home.tsx";
+import ContextProvider from "./state/provider.tsx";
+import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <Provider store={store}>
-    <App />
+    <ContextProvider>
+      <Home />
+    </ContextProvider>
   </Provider>
 );
