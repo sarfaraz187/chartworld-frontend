@@ -1,8 +1,8 @@
 export type MapContextType = {
-  map: Map | null;
+  // map: Map | null;
   openStreetMapLayer: TileLayer<TileImage> | null;
   openStreetMapSource: TileImage | null;
-  wmsLayer: IImageLayer<ImageWMSSource> | null;
+  wmsLayer: ImageLayer<ImageWMSSource> | null;
   wmsSource: ImageWMSSource | null;
 };
 

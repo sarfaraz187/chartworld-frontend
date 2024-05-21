@@ -1,22 +1,8 @@
-import { SET_LAT, SET_LON, SET_ZOOM } from "../constants";
+import { SET_MAP_POSITION } from "../constants";
 
-export const setLat = (lat: number) => {
+export const setMapPosition = (lat: number, lon: number, zoom: number) => {
   return {
-    type: SET_LAT,
-    payload: lat,
-  };
-};
-
-export const setLon = (lon: number) => {
-  return {
-    type: SET_LON,
-    payload: lon,
-  };
-};
-
-export const setZoom = (zoom: number) => {
-  return {
-    type: SET_ZOOM,
-    payload: zoom,
+    type: SET_MAP_POSITION,
+    payload: { lat, lon, zoom },
   };
 };

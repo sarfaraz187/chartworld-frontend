@@ -1,3 +1,1 @@
-export const SET_LAT = "SET_LAT";
-export const SET_LON = "SET_LON";
-export const SET_ZOOM = "SET_ZOOM";
+export const SET_MAP_POSITION = "SET_MAP_POSITION";

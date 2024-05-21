@@ -1,5 +1,5 @@
 import { ReactNode, useState } from "react";
-import Context from "./context";
+import Context from "./Context";
 import { MapContextType } from "../types/map";
 
 const ContextProvider = ({ children }: { children: ReactNode }) => {
