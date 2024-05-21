@@ -39,7 +39,7 @@ const MapComp = () => {
     });
 
     const imageLayer = new ImageLayer({
-      zIndex: context?.toggleBtnState.isActive ? 2 : 0,
+      zIndex: 2,
       source: new ImageWMS({
         ratio: 1,
         url: "https://wms.sevencs.com/",
