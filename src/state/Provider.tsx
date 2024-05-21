@@ -5,7 +5,7 @@ import { ToggleBtnType } from "../types/common";
 const ContextProvider = ({ children }: { children: ReactNode }) => {
   const [toggleBtnState, setToggleBtnState] = useState<ToggleBtnType>({
     title: "WMS Layer on",
-    isActive: false,
+    isActive: true,
   });
 
   const value = { toggleBtnState, setToggleBtnState };

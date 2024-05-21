@@ -10,7 +10,7 @@ const Home = () => {
 
   const handleBtnClick = () => {
     context.setToggleBtnState({
-      title: context.toggleBtnState.isActive ? "WMS Layer on" : "WMS Layer off",
+      title: context.toggleBtnState.isActive ? "WMS Layer off" : "WMS Layer on",
       isActive: !context.toggleBtnState.isActive,
     });
   };
