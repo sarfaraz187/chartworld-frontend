@@ -1,11 +1,15 @@
 import { ReactNode, useState } from "react";
 import Context from "./Context";
-import { MapContextType } from "../types/map";
+import { ToggleBtnType } from "../types/common";
 
 const ContextProvider = ({ children }: { children: ReactNode }) => {
-  const [mapContext, setMapContext] = useState<MapContextType>();
+  const [toggleBtnState, setToggleBtnState] = useState<ToggleBtnType>({
+    title: "WMS Layer on",
+    isActive: false,
+  });
 
-  const value = { mapContext, setMapContext };
+  const value = { toggleBtnState, setToggleBtnState };
+
   return <Context.Provider value={value}>{children}</Context.Provider>;
 };
 

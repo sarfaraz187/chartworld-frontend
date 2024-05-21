@@ -1,10 +1,27 @@
 import MapComp from "../ui/Map";
+import PrimaryButton from "../ui/components/PrimaryButton";
+import { useContext } from "react";
+import Context from "../state/Context";
 
 const Home = () => {
+  const context = useContext(Context);
+
+  if (!context) return "";
+
+  const handleBtnClick = () => {
+    context.setToggleBtnState({
+      title: context.toggleBtnState.isActive ? "WMS Layer on" : "WMS Layer off",
+      isActive: !context.toggleBtnState.isActive,
+    });
+  };
+
   return (
-    <div style={{ display: "flex", justifyContent: "center" }}>
-      <MapComp />
-    </div>
+    <>
+      {context?.toggleBtnState && <PrimaryButton title={context.toggleBtnState.title} emitClick={handleBtnClick} />}
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <MapComp />
+      </div>
+    </>
   );
 };
 
